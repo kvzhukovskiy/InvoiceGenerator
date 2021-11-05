@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="regForm">
+<head>
+    <script src="angular.js"></script>
+    <script src="regValidation.js"></script>
+    <link rel="stylesheet" type="text/css" href="design.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h1>Sign in</h1>
+    <div ng-controller="Validation as ctrl">
+        <label><b>Email</b></label>
+        <input type="text"  ng-model="ctrl.email" placeholder="Enter Email">
+        <hr>
+        <label><b>Password</b></label>
+        <input type="password" ng-model="ctrl.psw" placeholder="Enter Password" >
+        <hr>
+        <label><b>Repeat Password</b></label>
+        <input type="password" ng-model="ctrl.confpsw" placeholder="Repeat Password">
+        <input type="checkbox" ng-model="ctrl.conf">
+        <button ng-click="ctrl.reg()">Confirm</button>
+    </div>
+</div>
+</body>
+</html>
